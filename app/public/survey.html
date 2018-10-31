@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Friend Finder</title>
+</head>
+<body>
+    <div class = "jumbotron text-center">
+        <h1>Friend Finder</h1>
+    </div>
+    <div class = "container">
+    <div class = "card">
+        <h2 class = "card-header">Hello</h2>
+        <div class = "container">
+            <br>
+            <label for = "name">Enter Your Name:</label>
+                <input class = "form-control data" type = "text" id = "name">
+            <label for = "image">Enter A Link to A Photo of Yourself:</label>
+                <input class = "form-control data" type = "text" id = "image">
+                <br>
+            <label for = "q1">I like cats more than dogs.</label>
+            <select id = "q1" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q2">Family is the most important thing.</label>
+            <select id = "q2" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q3">I enjoy meeting new people.</label>
+            <select id = "q3" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q4">I consider myself a very active person.</label>
+            <select id = "q4" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q5">I give up very easily.</label>
+            <select id = "q5" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q6">I enjoy going to sporting events.</label>
+            <select id = "q6" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q7">It's easy for me to trust people.</label>
+            <select id = "q7" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q8">I won't date someone without a degree.</label>
+            <select id = "q8" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q9">I have many close friends.</label>
+            <select id = "q9" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <label for = "q10">I prefer autumn over spring.</label>
+            <select id = "q10" class = "data">
+                <option value = "1">1 (Strongly Disagree)</option>
+                <option value = "2">2 </option>
+                <option value = "3">3 </option>
+                <option value = "4">4 </option>
+                <option value = "5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <input class = "btn btn-dark" type = "submit" id = "submit">
+            <button class = "btn btn-dark text-white"><a href = "/" class = "text-white">Back to the mainpage</a></button>
+        </div>
+
+        <div id = "results"class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Best Match</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li id = "matchName"></li>
+                            <li><img id = "matchPhoto"></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type = "text/javascript">
+    $("#submit").on("click", function () {
+        function validate () {
+            var valid = true
+            $(".data").each(function () {
+                if ($(this).val() === "") {
+                    valid = false
+                }
+            })
+            return valid
+        }
+        if (validate()) {
+            var user = {
+                name: $("#name").val(),
+                photo: $("#image").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val()
+                ]
+            }
+            var url = window.location.origin
+            $.post(url + "/api/friends", user, function (data) {
+                $("#matchName").text(data.name)
+                $("#matchPhoto").attr("src", data.photo)
+                $("#results").modal("toggle")
+            })
+        }
+        else {
+            alert("You must fill everything out!")
+        }
+        return false
+    })
+    
+    </script>
+
+</body>
+</html>
