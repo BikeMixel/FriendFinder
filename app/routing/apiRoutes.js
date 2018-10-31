@@ -11,14 +11,13 @@ router.post("/api/friends", function (req, res) {
     var difference = 25
     var matchName = ""
     var matchImage = ""
-    console.log(res)
 
     friends.forEach(function (friend) {
         var matchArray = []
         var totalDifference = 25
 
-        for (var i = 0; i < friend.scores.length; i++) {
-            matchArray.push(Math.abs(parseInt(4) - parseInt(5)))
+        for (var i = 0; i < 10; i++) {
+            matchArray.push(Math.abs(parseInt(res.body.scores[i]) - parseInt(friends.scores[i])))
         }
 
         function addHelp (total, num) {
